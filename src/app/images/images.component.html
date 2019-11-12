@@ -1,7 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col"><button class="btn btn-primary">Indietro</button></div>
-    <div class="col"><img [src]="images[index]" alt="immagini"></div>
-    <div class="col"><button class="btn btn-primary">Avanti</button></div>
+    <div class="col-sm">
+      <button class="btn btn-primary" (click)="indietro()" [disabled]="indietroButton">Indietro</button>
+    </div>
+    <div class="col-sm">
+      <img [src]="images[index]" alt="immagini">
+    </div>
+    <div class="col-sm">
+      <button class="btn btn-primary" (click)="avanti()" [disabled]="avantiButton">Avanti</button>
+    </div>
   </div>
 </div>
+
+<button (click)="auto()" class="btn btn-primary">Auto</button>
