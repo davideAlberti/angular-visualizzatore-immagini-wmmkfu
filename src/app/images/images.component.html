@@ -1,5 +1,6 @@
 <div class="container">
   <img [src]="images[index]" alt="immagine" class="h-100 w-100">
+  <div class="top-left">{{ index + 1 }} / {{ images.length }}</div>
   <div class="row">
     <div class="col-sm-4">
       <button class="btn btn-ligh" (click)="indietro()" [disabled]="indietroButton">Indietro</button>
