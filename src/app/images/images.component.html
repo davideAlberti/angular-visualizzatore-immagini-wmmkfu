@@ -1,15 +1,9 @@
 <div class="container">
+  <img [src]="images[index]" alt="immagine" class="h-100 w-100">
   <div class="row">
-    <div class="col-sm">
-      <button class="btn btn-primary" (click)="indietro()" [disabled]="indietroButton">Indietro</button>
-    </div>
-    <div class="col-sm">
-      <img [src]="images[index]" alt="immagini">
-    </div>
-    <div class="col-sm">
-      <button class="btn btn-primary" (click)="avanti()" [disabled]="avantiButton">Avanti</button>
-    </div>
+    <div class="col-sm-4"><button class="btn btn-ligh" (click)="indietro()" [disabled]="indietroButton">Indietro</button></div>
+    <div class="col-sm-4" *ngIf="auto"><button class="btn btn-ligh" (click)="stop()">Stop</button></div>
+    <div class="col-sm-4" *ngIf="!auto"><button class="btn btn-ligh" (click)="autoGo()">Avvia</button></div>
+    <div class="col-sm-4"><button class="btn btn-ligh" (click)="avanti()" [disabled]="avantiButton">Avanti</button></div>
   </div>
 </div>
-
-<button (click)="auto()" class="btn btn-primary">Auto</button>
